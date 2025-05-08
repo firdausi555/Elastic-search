@@ -1,0 +1,7 @@
+<h2>All Products</h2>
+<ul>
+  {% for product in products %}
+    <li>{{ product.name }} - ${{ product.price }}</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'search_products' %}?q=phone">Try a search</a>

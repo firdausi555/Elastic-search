@@ -1,0 +1,9 @@
+<h2>Search Results for "{{ query }}"</h2>
+<ul>
+  {% for hit in results %}
+    <li>{{ hit.name }} - ${{ hit.price }}</li>
+  {% empty %}
+    <li>No results found.</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'product_list' %}">Back to product list</a>
